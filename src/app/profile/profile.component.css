@@ -1,0 +1,32 @@
+.bar{
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+.rightbar{
+    width: 80vw;
+}
+#upbar{
+    height: 10vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.infocontainer{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.insideinfocontainer{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.rightbar{
+    width: 80vw;
+}

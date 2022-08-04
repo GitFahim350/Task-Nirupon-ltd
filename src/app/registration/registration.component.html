@@ -1,0 +1,98 @@
+<div class="regcontainer">
+
+<h3 style="text-align: center;" class="mb-3">Registration panel</h3>
+<form #userForm="ngForm" class="regform" (ngSubmit)="userForm.form.valid && getUserFormData(userForm.value)">
+    <table>
+        <tr>
+            <td>
+                First Name:
+            </td>
+            <td>
+                <div *ngIf="firstname.invalid && (firstname.touched||firstname.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="text" placeholder="Name" name="firstName" #firstname="ngModel" [(ngModel)]="userservice.userdata.firstName" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Last Name:
+            </td>
+            <td>
+                <div *ngIf="lastname.invalid && (lastname.touched||lastname.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="text" placeholder="Name" name="lastName" #lastname="ngModel" [(ngModel)]="userservice.userdata.lastName" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Address:
+            </td>
+            <td>
+                <div *ngIf="address.invalid && (address.touched||address.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="text" placeholder="Name" name="address" #address="ngModel" [(ngModel)]="userservice.userdata.address" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Phone Number:
+            </td>
+            <td>
+                <div *ngIf="phone.invalid && (phone.touched||phone.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="phone" placeholder="9867******"  name="phone" #phone="ngModel" [(ngModel)]="userservice.userdata.phone" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Email Id:
+            </td>
+            <td>
+                <div *ngIf="email.invalid && (email.touched||email.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="email" placeholder="example1@*8" name="email" #email="ngModel" [(ngModel)]="userservice.userdata.email" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Date of Birth:
+            </td>
+            <td>
+                <div *ngIf="birthDate.invalid && (birthDate.touched||birthDate.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="date" ngModel name="birthDate" #birthDate="ngModel" [(ngModel)]="userservice.userdata.brithDate" required>
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                Password:
+            </td>
+            <td>
+                <div *ngIf="password.invalid && (password.touched||password.dirty)" class="float-right">
+                    <p class="text-danger">Required</p>
+                </div>
+                <input type="password" ngModel placeholder="Password" name="password" #password="ngModel" [(ngModel)]="userservice.userdata.password" required>
+            </td>
+        </tr>
+       
+    
+    </table>
+    
+    <div class="d-flex justify-content-between p-5 mt-1">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="" class="btn btn-danger">clear</button>
+    </div>
+</form>
+</div>

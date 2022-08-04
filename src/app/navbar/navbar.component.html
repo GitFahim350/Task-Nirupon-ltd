@@ -1,0 +1,13 @@
+<nav class="navbar">
+    <h2 class="left ml-5">Navigation</h2>
+    <div class="dropdown right mr-5">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{signedInuser.firstName}}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" routerLink="/changepassword">Change Password</a>
+        <a class="dropdown-item" (click)="logout()" routerLink="">Logout</a>
+        
+      </div>
+    </div>
+  </nav>

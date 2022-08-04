@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="bar">
+    <app-leftbar></app-leftbar>
+    <div class="rightbar">
+        <div style="height: 10vh;" id="upbar">
+            <h2 style="text-align: center;">User Profle</h2>
+        </div>
+        <div class="infocontainer">
+            <div class="insideinfocontainer">
+
+                <div>
+                    <h5>First Name:</h5>
+                    <br>
+                    <h5>Last Name:</h5>
+                    <br>
+                    <h5>Address:</h5>
+                    <br>
+                    <h5>Phone:</h5>
+                    <br>
+                    <h5>Email:</h5>
+                    <br>
+                    <h5>BirthDate:</h5>
+
+                </div>
+                <div>
+                    <h5>{{signedInuser.firstName}}</h5>
+                    <br>
+                    <h5>{{signedInuser.lastName}}</h5>
+                    <br>
+                    <h5>{{signedInuser.address}}</h5>
+                    <br>
+                    <h5>{{signedInuser.phone}}</h5>
+                    <br>
+                    <h5>{{signedInuser.email}}</h5>
+                    <br>
+                    <h5>{{signedInuser.birthDate| date}}</h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

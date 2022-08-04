@@ -1,0 +1,31 @@
+.bar{
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+}
+#leftbar{
+    height: 100vh;
+    width: 20vw;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px; 
+    
+}
+.Itemclk{
+    border-bottom: 2px solid rgb(192, 192, 218);
+    cursor: pointer;
+}
+.rightbar{
+    width: 80vw;
+}
+
+#upbar{
+    height: 10vh;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: hidden;
+}

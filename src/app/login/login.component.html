@@ -1,0 +1,35 @@
+<div class="fullpage ">
+
+    <h3 class="mb-3">Login page</h3>
+    <form class="form p-5" #loginForm="ngForm"  (ngSubmit)="loginForm.form.valid && getUserloginData(loginForm.value)">
+        <div class="form-group">
+
+            <p class="lebel" for="exampleInputEmail1">Email address</p>
+            <div *ngIf="email.invalid && (email.touched||email.dirty)" class="float-right">
+                <p class="text-danger">Required</p>
+            </div>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" name="email" #email="ngModel" [(ngModel)]="userservice.userlogindata.email" required>
+        </div>
+        <div class="form-group">
+            <p class="lebel">Password</p>
+            <div *ngIf="password.invalid && (password.touched||password.dirty)" class="float-right">
+                <p class="text-danger">Required</p>
+            </div>
+            <input type="password" class="form-control" id="exampleInputPassword1" 
+            placeholder="Password" name="password" #password="ngModel" [(ngModel)]="userservice.userlogindata.password" required>
+        </div>
+
+        <p *ngIf="error" class="text-danger">wrong email or password</p>
+
+
+        <div class="d-flex justify-content-between p-5 mt-5">
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="" class="btn btn-danger">clear</button>
+        </div>
+
+        <p style="text-align: center;">Are you new here? <span class="naviagatepage" routerLink="registration" >Register now</span></p>
+        
+    </form>
+
+</div>
