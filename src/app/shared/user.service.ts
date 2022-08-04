@@ -30,11 +30,9 @@ export class UserService {
 
   LoginUser()
   {
-    //console.log(this.userlogindata);
     return this.myhttp.post(this.Userloginurl,this.userlogindata);
   }
   isLoggedin():boolean{
-
     return localStorage.getItem("user")?true:false;
   }
   loadData()
@@ -42,12 +40,10 @@ export class UserService {
     let data:any=localStorage.getItem('user');
       return JSON.parse(data);
   }
-  // updateUser(){
-  //   return this.myhttp.put(`${this.Userurl}/${this.userdata.id}`,this.userdata);
-  // }
   
-  // deleteUser()
-  // {
-  //   return this.myhttp.delete(`${this.Userurl}/${this.userdata.id}`);
-  // }
+  updateUser(){
+    return this.myhttp.put(`${this.Userurl}/${this.userdata.id}`,this.userdata);
+  }
+  
+ 
 }

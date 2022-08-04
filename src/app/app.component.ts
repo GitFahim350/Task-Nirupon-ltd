@@ -7,13 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Assignment';
-  signedInuser:any;
+  // signedInuser:any;
 
-  
-  
   ngOnInit(): void {
-    let data:any=localStorage.getItem('user');
-    this.signedInuser=JSON.parse(data);
+    // let data:any=localStorage.getItem('user');
+    // this.signedInuser=JSON.parse(data);
   }
-  
 }
