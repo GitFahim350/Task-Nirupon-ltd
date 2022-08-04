@@ -1,7 +1,7 @@
 <div class="regcontainer">
 
 <h3 style="text-align: center;" class="mb-3">Registration panel</h3>
-<form #userForm="ngForm" class="regform" (ngSubmit)="userForm.form.valid && getUserFormData(userForm.value)">
+<form #userForm="ngForm" class="regform" (ngSubmit)="userForm.form.valid && getUserFormData(userForm)">
     <table>
         <tr>
             <td>
@@ -93,6 +93,9 @@
     <div class="d-flex justify-content-between p-5 mt-1">
         <button type="submit" class="btn btn-primary">Register</button>
         <button type="" class="btn btn-danger">clear</button>
+    </div>
+    <div *ngIf="Emailexists">
+        <span class="text-danger" style="text-align: center;">This email already exists!!!</span>
     </div>
 </form>
 </div>

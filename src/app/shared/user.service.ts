@@ -44,6 +44,13 @@ export class UserService {
   updateUser(){
     return this.myhttp.put(`${this.Userurl}/${this.userdata.id}`,this.userdata);
   }
+  isadmin():boolean{
+    if(localStorage.getItem("user")!=null){
+      let data:any=localStorage.getItem('user');
+      return JSON.parse(data).email=="admin@localhost.local"?true:false;
+    }
+    return false;
+  }
   
  
 }

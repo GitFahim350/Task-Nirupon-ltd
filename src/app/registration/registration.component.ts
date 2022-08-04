@@ -15,23 +15,36 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  Emailexists:boolean=false;
   
   getUserFormData(form:NgForm){
+    console.log("BirthDate",this.userservice.userdata.brithDate);
     this.insertUser(form);
-    this.router.navigateByUrl('\login')
+    
   }
 
   insertUser(myForm:NgForm){
     this.userservice.saveUser().subscribe(d=>{
-      this.userservice.getUser().subscribe(res=>{
-        this.userservice.listUser=res;
-      });
-      console.log("Save success");
+      console.log("d value is ",d);
+      if(d!=null){
+        this.userservice.getUser().subscribe(res=>{
+          this.userservice.listUser=res;
+        });
+        this.resetForm(myForm);
+        this.router.navigateByUrl('')
+        console.log("Save success");
+      }
+      else{
+        
+        this.Emailexists=true;
+      }
     });
+
   }
 
   resetForm(myForm:NgForm){
-    myForm.form.reset();
+    myForm.reset();
     this.userservice.userdata=new User();
   }
 

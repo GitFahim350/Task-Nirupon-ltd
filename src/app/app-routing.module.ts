@@ -7,6 +7,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProfileComponent } from './profile/profile.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './shared/auth.guard';
+import { AdmingurdGuard } from './shared/admingurd.guard';
 
 const routes: Routes = [
 
@@ -32,7 +33,7 @@ const routes: Routes = [
   {
     path:'admin',
     component:AdminComponent,
-    canActivate:[AuthGuard]
+    canActivate:[AdmingurdGuard]
   },
   {
     path:'',

@@ -11,7 +11,7 @@ export class AdminComponent implements OnInit {
   constructor(public userservice:UserService) { 
     
   }
-
+  searchText:any;
   ngOnInit() {
     this.userservice.getUser().subscribe(data=>{
       //console.log("Hello",data);

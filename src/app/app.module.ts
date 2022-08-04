@@ -13,6 +13,7 @@ import { BarComponent } from './bar/bar.component';
 import { LeftbarComponent } from './leftbar/leftbar.component';
 import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
