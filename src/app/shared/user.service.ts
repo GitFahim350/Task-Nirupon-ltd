@@ -10,11 +10,12 @@ import { User } from './user.model';
 })
 export class UserService {
 
-  Userurl:string="https://localhost:7247/api/Users";
-  Userloginurl:string="https://localhost:7247/api/Users/loginuser";
+  //Userurl:string="https://localhost:7247/api/Users";
+  Userurl:string="https://localhost:44381/api/users";
+  //Userloginurl:string="https://localhost:7247/api/Users/loginuser";
+  Userloginurl:string="https://localhost:44381/api/Users/loginuser";
   listUser:User[]=[];
   userdata:User=new User();
-  
   userlogindata:UserLogin=new UserLogin();
   constructor(private myhttp:HttpClient) { }
 

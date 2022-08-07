@@ -3,6 +3,7 @@ import { UserService } from './../shared/user.service';
 import { NgForm } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../shared/user.model';
+import { UserLogin } from '../shared/userlogin.model';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +33,10 @@ export class LoginComponent implements OnInit {
         this.error=true;
       }
     });
+  }
+  resetForm(myForm:NgForm){
+    myForm.reset();
+    this.userservice.userlogindata=new UserLogin();
   }
 
 }

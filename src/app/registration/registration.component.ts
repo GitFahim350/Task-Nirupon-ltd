@@ -19,7 +19,7 @@ export class RegistrationComponent implements OnInit {
   Emailexists:boolean=false;
   
   getUserFormData(form:NgForm){
-    console.log("BirthDate",this.userservice.userdata.brithDate);
+    //console.log("BirthDate",this.userservice.userdata.brithDate);
     this.insertUser(form);
     
   }
